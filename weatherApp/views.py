@@ -5,7 +5,7 @@ from django.shortcuts import render
 def index(request):
     if request.method == 'POST':
         city = request.POST['city']
-        # source = urllib.request.urlopen('http://api-openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=5d4e70074ed4397afd8f704ee5e1566a')
+        source = urllib.request.urlopen('http://api-openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=<apikey>')
 
         list_of_data = json(source)
 
